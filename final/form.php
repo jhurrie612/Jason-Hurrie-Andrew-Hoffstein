@@ -5,19 +5,19 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
         
-$importantPositions = array('CooperKupp', 'TomBrady', 'JonathanTaylor', 'Biomass');
+$importantPositions = array('Quarterback', 'Running Back', 'Wide Receiver', 'Other');
 
 $dataIsGood = false;
 
 $firstName = '';
 $lastName = '';
 $email = '';
-$importantPosition = 'Biomass';
+$importantPosition = 'Quarterback';
 $reason = '';
 $draft = 'Quarterback';
-$CooperKupp= false;
-$JonathanTaylor= false;
-$TomBrady = false;
+$cooperKupp= false;
+$jonathanTaylor= false;
+$tomBrady = false;
 $other = false;
 
 function getData($field){
@@ -31,9 +31,6 @@ function getData($field){
 }
 
 function verifyAlphaNum($testString) {
-    // Check for letters, numbers and dash, period, space and single quote only.
-    // added & ; and # as a single quote sanitized with html entities will have 
-    // this in it bob's will be come bob's
     return (preg_match ("/^([[:alnum:]]|-|\.| |\'|&|;|#)+$/", $testString));
 }
 
@@ -51,17 +48,17 @@ function verifyAlphaNum($testString) {
             if($_SERVER["REQUEST_METHOD"] == 'POST'){
 
                 // Sanitize data
-                $firstName = getData('txtfirstName');
-                $lastName = getData('txtlastName');
-                $email = getData('txtemail');
+                $firstName = getData('txtFirstName');
+                $lastName = getData('txtLastName');
+                $email = getData('txtEmail');
                 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-                $importantPosition = getData('lstimportantPosition');
-                $reason = getData('txtreason');
-                $draft= getData('raddraft');
-                $CooperKupp= (int) getData('chkCooperKupp');
-                $JonathanTaylor= (int) getData('chkJonathanTaylor');
-                $TomBrady = (int) getData('chkTomBrady');
-                $other = (int) getData('chkother');
+                $importantPosition = getData('lstImportantPosition');
+                $reason = getData('txtReason');
+                $draft= getData('radDraft');
+                $cooperKupp= (int) getData('chkCooperKupp');
+                $jonathanTaylor= (int) getData('chkJonathanTaylor');
+                $tomBrady = (int) getData('chkTomBrady');
+                $other = (int) getData('chkOther');
 
                 // validate form
                 $dataIsGood = true;
@@ -95,7 +92,7 @@ function verifyAlphaNum($testString) {
                     print '<p class="mistake">Please choose a favorite position.</p>';
                     $dataIsGood = false;
                 } elseif(!in_array($importantPosition, $importantPositions)){
-                    print '<p class="mistake">Please choose a favorite position.</p>';
+                    print '<p class="mistake">There was an error with your submission, please choose a favorite position.</p>';
                     $dataIsGood = false;
                 }
                 
@@ -108,22 +105,22 @@ function verifyAlphaNum($testString) {
                     $dataIsGood = false;
                 }
                 
-                if($draft != 'Quarterback' AND $draft != "RunningBack" 
-                AND $draft != "WideReceiver") { 
+                if($draft != 'Quarterback' AND $draft != "Running Back" 
+                AND $draft != "Wide Receiver") { 
                     print '<p class="mistake">Please tell us your thoughts on these positions.</p>';
                     $dataIsGood = false;
                 }
 
                 $totalChecked = 0;
 
-                if($CooperKupp != 1) $CooperKupp = 0;
-                $totalChecked += $CooperKupp;
+                if($cooperKupp != 1) $cooperKupp = 0;
+                $totalChecked += $cooperKupp;
 
-                if($JonathanTaylor != 1) $JonathanTaylor = 0;
-                $totalChecked += $JonathanTaylor;
+                if($jonathanTaylor != 1) $jonathanTaylor = 0;
+                $totalChecked += $jonathanTaylor;
 
-                if($TomBrady != 1) $TomBrady = 0;
-                $totalChecked += $TomBrady;
+                if($tomBrady != 1) $tomBrady = 0;
+                $totalChecked += $tomBrady;
 
                 if($other != 1) $other = 0;
                 $totalChecked += $other;
@@ -135,25 +132,43 @@ function verifyAlphaNum($testString) {
                 //save data
                 if($dataIsGood){
                     try{
-                        $sql = ' INSERT INTO tblImportantPosition
-                        (fldfirstName, fldlastName, fldemail, 
-                        fldimportantPosition, fldreason, fldradio, 
-                        fldCooperKupp, fldJonathanTaylor, fldTomBrady, fldother)
+                        $sql = 'INSERT INTO tblImportantPosition
+                        (fldFirstName, fldLastName, fldEmail, 
+                        fldImportantPosition, fldReason, fldDraft, 
+                        fldQuarterback, fldRunningBack, fldWideReceiver, fldOther)
                     VALUES
                         (?, ?, ?, ?, ?,?, ?, ?, ?, ?)';
                         $statement= $pdo->prepare($sql);
                         $data = array($firstName, $lastName, $email, $importantPosition, 
-                        $reason, $draft, $CooperKupp, $JonathanTaylor, $TomBrady, $other,);
+                        $reason, $draft, $cooperKupp, $jonathanTaylor, $tomBrady, $other);
 
                         if($statement->execute($data)){
                             print '<h2>Thank you</h2>';
                             print '<p>Record is succesfully saved!</p>';
+
+                            $to = $email;
+                            $from = 'Andrew and Jason <ahoffste@uvm.edu>';
+                            $subject = 'Andrew and Jason Fantasy Football';
+
+                            $mailMessage = '<p style="font: 12pt serif;">Thank you for filling out our survey.</p>';
+
+                            $header = "MIME-Version: 1.0\r\n";
+                            $header .= "Content-type: text/html; charset=utf-8\r\n";
+                            $header .= "From: " . $from . "\r\n";
+
+                            $mailSent = mail($to, $subject, $mailMessage, $header);
+
+                            if ($mailSent) {
+                                print "<p>A copy of your survey has been emailed to you for your records.</p>";
+                                print $mailMessage;
+                                }
+                                
                         } else{
                             print '<p>Record is NOT succesfully saved!</p>';
                         }
 
                     } catch(PDOException $e){
-                        print '<p>Couldn\t insert the record, please contact someone</p>';
+                        print '<p>Could not insert the record, please contact Jason or Andrew.</p>';
                     }
                 } // data is good
             } // end submitting form
@@ -179,22 +194,22 @@ function verifyAlphaNum($testString) {
                 <fieldset>
                     <legend>Contact Information</legend>
                     <p>
-                        <label class="required" for="txtfirstName">First Name:</label>
-                        <input type="text" name="txtfirstName" id="txtfirstName" value="<?php print $firstName; ?>" required>
+                        <label class="required" for="txtFirstName">First Name:</label>
+                        <input type="text" name="txtFirstName" id="txtFirstName" value="<?php print $firstName; ?>" required>
                     </p>
                     <p>
-                        <label class="required" for="txtlastName">Last Name:</label>
-                        <input type="text" name="txtlastName" id="txtlastName" value="<?php print $lastName; ?>" required>
+                        <label class="required" for="txtLastName">Last Name:</label>
+                        <input type="text" name="txtLastName" id="txtLastName" value="<?php print $lastName; ?>" required>
                     </p>
                     <p>
-                        <label class="required" for="txtemail">Email Address:</label>
-                        <input type="email" name="txtemail" id="txtemail" value="<?php print $email; ?>" required>
+                        <label class="required" for="txtEmail">Email Address:</label>
+                        <input type="email" name="txtEmail" id="txtEmail" value="<?php print $email; ?>" required>
                     </p>
                 </fieldset>
                 <fieldset class="listbox">
                     <legend>Most Important Position</legend>
                     <p>
-                        <select id="lstimportantPosition" name="lstimportantPosition" tabindex="120">
+                        <select id="lstImportantPosition" name="lstImportantPosition" tabindex="120">
                             <option value="Quarterback" <?php 
                             if($importantPosition == "Quarterback") print 'selected';?>>Quarterback</option>
 
@@ -213,8 +228,8 @@ function verifyAlphaNum($testString) {
 
                 <fieldset class="textarea">
                     <p>
-                        <label for="txtreason">Tell us why this is the most important fantasy football position?</label>
-                        <textarea id="txtreason" name="txtreason" tabindex="200">
+                        <label for="txtReason">Tell us why this is the most important fantasy football position?</label>
+                        <textarea id="txtReason" name="txtReason" tabindex="200">
                         <?php print $reason;?></textarea>
                     </p>
                 </fieldset>
@@ -222,24 +237,24 @@ function verifyAlphaNum($testString) {
                 <fieldset class="radio">
                     <legend>Which of these positions would you draft first this season?</legend>
                     <p>
-                        <input type="radio" id="raddraftQuarterback" name="raddraft" value="Quarterback" tabindex="410" 
+                        <input type="radio" id="radDraftQuarterback" name="radDraft" value="Quarterback" tabindex="410" 
                         required <?php 
                             if($draft == "Quarterback") print 'checked';?>>
-                        <label for="raddraftQuarterback">Quarterback</label>
+                        <label for="radDraftQuarterback">Quarterback</label>
                     </p>
 
                     <p>
-                        <input type="radio" id="raddraftRunningBack" name="raddraft" value="RunningBack" tabindex="410" 
+                        <input type="radio" id="radDraftRunningBack" name="radDraft" value="Running Back" tabindex="410" 
                         required <?php 
-                            if($draft == "RunningBack") print 'checked';?>>
-                        <label for="raddraftRunningBack">Running Back</label>
+                            if($draft == "Running Back") print 'checked';?>>
+                        <label for="radDraftRunningBack">Running Back</label>
                     </p>
 
                     <p>
-                        <input type="radio" id="raddraftWideReceiver" name="raddraft" value="WideReceiver" tabindex="410" 
+                        <input type="radio" id="radDraftWideReceiver" name="radDraft" value="Wide Receiver" tabindex="410" 
                         required <?php 
-                            if($draft == "WideReceiver") print 'checked';?>>
-                        <label for="raddraftWideReceiver">Wide Receiver</label>
+                            if($draft == "Wide Receiver") print 'checked';?>>
+                        <label for="radDraftWideReceiver">Wide Receiver</label>
                     </p>
                 </fieldset>
 
@@ -247,25 +262,25 @@ function verifyAlphaNum($testString) {
                     <legend>Check all those that you believe have the chance to score the most fantasy football points this season.</legend>
                     <p>
                         <input id="chkCooperKupp" name="chkCooperKupp" tabindex="510" type="checkbox" value="1" <?php 
-                            if($CooperKupp) print 'checked';?>>
+                            if($cooperKupp) print 'checked';?>>
                         <label for="chkCooperKupp">Cooper Kupp</label>
                     </p>
 
                     <p>
                         <input id="chkJonathanTaylor" name="chkJonathanTaylor" tabindex="510" type="checkbox" value="1" <?php 
-                            if($JonathanTaylor) print 'checked';?>>
+                            if($jonathanTaylor) print 'checked';?>>
                         <label for="chkJonathanTaylor">Jonathan Taylor</label>
                     </p>
 
                     <p>
                         <input id="chkTomBrady" name="chkTomBrady" tabindex="510" type="checkbox" value="1" <?php 
-                            if($TomBrady) print 'checked';?>>
+                            if($tomBrady) print 'checked';?>>
                         <label for="chkTomBrady">Tom Brady</label>
                     </p>
                     <p>
-                        <input id="chkother" name="chkother" tabindex="510" type="checkbox" value="1" <?php 
+                        <input id="chkOther" name="chkOther" tabindex="510" type="checkbox" value="1" <?php 
                             if($other) print 'checked';?>>
-                        <label for="chkother">Other</label>
+                        <label for="chkOther">Other</label>
                     </p>
                 </fieldset>
 
