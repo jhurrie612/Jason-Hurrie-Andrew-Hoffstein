@@ -1,0 +1,338 @@
+:root {
+    --main-bg-color:#00ccff;
+    --main-bg-color-rgba: rgba(255, 0, 200, 0.9);
+    --nav-bg-color-rgba: rgba(0, 0, 0, 0.9);
+    --main-text-color:#000000;
+    --background-odd: rgba(118, 200, 255, 0.9);
+    --background-even: rgb(190, 86, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main,
+article,
+section,
+aside,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav {
+    padding: 1%;
+}
+
+html {
+    background-image: url(../images/tdgarden.jfif);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+body {
+    margin: .5% auto;
+    max-width: 50em;
+}
+
+h1 {
+    padding: 5%;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+header h1,
+header h2 {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+nav,
+footer {
+    background-color: white;
+    border-bottom: medium solid var(--main-bg-color);
+    padding: 1% 0;
+    text-align: center;
+}
+
+main {
+    background-color: var(--main-bg-color-rgba);
+    padding: 10%;
+}
+
+footer {
+    clear: both;
+}
+
+.jt, .kupp {
+    width: auto;
+}
+
+.thanks {
+    width: 75%;
+}
+
+footer a:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(228, 224, 0);
+}
+
+cite {
+    font-size: small;
+}
+
+figure {
+    text-align: center;
+    width: 37%;
+    margin-top: 1em;
+    padding: 2%;
+}
+
+figcaption {
+    text-align: center;
+    width: 100%;
+}
+
+h1, h2 {
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10%;
+    border: medium solid rgb(80, 185, 255);
+
+}
+
+p {
+    color: lightgray;
+    text-align: left;
+    text-indent: 3em;
+    padding-bottom: 1em;
+}
+
+section + section h2 {
+    clear: both;
+}
+
+li:nth-child(odd) {
+    background-color: var(--background-odd);
+}
+
+ol {
+    margin: 1em;
+}
+
+ol li {
+    padding-left: 1em;
+}
+
+li:nth-child(even) {
+    background-color: var(--background-even);
+}
+
+form {
+    background-color: var(--main-bg-color-rgba);
+    border: thin solid black;
+    clear: both;
+    max-width: 30em;
+    margin: auto;
+    padding: 1%;
+}
+
+form p {
+    text-indent: 0;
+}
+
+fieldset {
+    padding: 1.5%;
+}
+
+legend {
+    margin-top: 1%;
+}
+
+table {
+    border: medium solid black;
+    border-collapse: collapse;
+    max-width: 100%;
+    margin: auto;
+}
+
+table+p {
+    padding-top: 1em;
+}
+
+td,
+th {
+    border: thin dashed black;
+    padding: .53em
+}
+
+tr:nth-child(odd) {
+    background-color: var(--background-odd);
+}
+
+tr:nth-child(even) {
+    background-color: var(--background-even);
+}
+
+caption {
+    font-variant: small-caps;
+    font-weight: bold;
+    padding-top: 1em;
+}
+nav a:link {
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: yellow;
+    background-color: black;
+}
+
+nav a {
+    display: inline-block;
+    width: 19%;
+    color: black;
+}
+
+a:hover {
+    color: yellow;
+    background: black;
+}
+
+a:visited {
+    color:rgb(33, 0, 180);
+}
+
+nav {
+    border: thin solid rgb(80, 185, 255);
+    background-color: white;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "page-heading page-heading" "section-three section-one" "section-two section-two";
+    grid-template-columns: auto;
+    grid-gap: 1%;
+}
+
+main h1:first-child {
+    grid-area: page-heading;
+}
+
+.qb {
+    grid-area: section-three;
+}
+
+.championships, .photo {
+    grid-area: section-two;
+}
+
+.QBtable {
+    grid-area: section-one;
+}
+
+.rb, .wr {
+    grid-area: section-three;
+}
+
+.fflogo {
+    width: 91%;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+
+.form main {
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 30% auto;
+}
+
+.form main h1:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.form-info {
+    grid-column: 1;
+    grid-row: 2;
+    padding-top: 4em;
+}
+
+.form-it-self {
+    grid-column: 2;
+    grid-row: 2 / 2;
+    padding-top: 4em;
+}
+
+.form {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.form-feedback {
+    grid-area: section-two;
+    padding-bottom: 15%;
+    color:lightgray;
+}
+
+label {
+    color: rgb(80, 185, 255);
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 75%;
+    padding: 5% 5%;
+    margin: 1em 0;
+    color: black;
+    border: .25em solid rgb(80, 185, 255);
+}
+
+input[type="radio"] {
+    width: 1em;
+    height: 1em;
+}
+
+input[type="checkbox"] {
+    width: 1em;
+    height: 1em;
+}
+
+.listbox {
+    height: 100%;
+}
+
+.textarea {
+    height: 100%;
+}
+
+.buttons {
+    height: 100%;
+    padding: 2.5%;
+}
+
+.activePage {
+    background-color: antiquewhite;
+}
+
+.five-champion {
+    grid-area: section-one;
+}
+
+.bill {
+    grid-area: page-heading;
+    padding-top: 8em;
+}

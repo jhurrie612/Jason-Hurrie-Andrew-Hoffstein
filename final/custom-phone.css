@@ -1,0 +1,9 @@
+nav a{
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 0.7em;
+}
+nav {
+  padding: 2%;
+}
