@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Andrew and Jason Final Project</title>
-        <meta name="author" content="Andrew and Jason">
-        <meta name="description" content="Final project for Andrew and Jason">
+        <title>CS008 Page for Andrew Hoffstein</title>
+        <meta name="author" content="Andrew Hoffstein">
+        <meta name="description" content="CS008 Page for Andrew Hoffstein">
         <style>
 
             /* basic CSS */
@@ -80,13 +80,13 @@
 
     <body>
         <figure class="right small">
-            <img alt="Jason and Andrew" 
-                 src="image/jason-andrew.png">
-            <figcaption>Jason and Andrew Final Project for cs008.</figcaption>
+            <img alt="Andrew Hoffstein" 
+                 src="image/andrew-hoffstein.png">
+            <figcaption>A photo of me during my second semester of freshman year.</figcaption>
         </figure>
 
         <h1>CS 008-<em>B</em> Spring 2022</h1>
-        <h2>Andrew and Jason - Final Project</h2>
+        <h2>Andrew Hoffstein - CS008 Web Page</h2>
         <p><a href="ADMIN/admin.php">My Admin Folder</a></p>
         <p><a href="ADMIN/table-viewer.php">Table viewer</a></p>
 
@@ -94,20 +94,18 @@
             <h2 class="header">Final Project - Project by Andrew and Jason.</h2>
             <section class="public-files">
                 <h3>Public Files</h3>
-                <p><a href="final/index.php">index.php</a></p>
+                <p><a href="final/index.php">index.php (Contains Table)</a></p>
                 <p><a href="final/detail.php">detail.php</a></p> 
-                <p><a href="final/array.php">array.php</a></p>
+                <p><a href="final/detail2.php">detail2.php</a></p>
                 <p><a href="final/form.php">form.php</a></p>
             </section>
 
             <section class="supporting-files">
                 <h3>Supporting files</h3>
                 <p><a href="final/css/custom.css">custom.css</a> </p>
-                <p><a href="final/images/wireframe.png">wireframe.png</a></p>
-                <p><a href="final/images/wireframe2.png">wireframe2.png</a></p>
-                <p><a href="final/images/wireframe3.png">wireframe3.png</a></p>
-                <p><a href="final/images/phone.wireframe.png">PhoneWireframe.png</a></p>
-                <p><a href="final/images/tablet.wireframe.png">TabletWireframe.png</a></p>
+                <p><a href="final/images/wireframe-desktop.png">wireframe</a></p>
+                <p><a href="final/images/wireframe-tablet.png">Tablet Wireframe</a></p>
+                <p><a href="final/images/wireframe-phone.png">Phone Wireframe</a></p>
                 <p><a href="final/header.php">header.php</a></p>
                 <p><a href="final/top.php">top.php</a></p>
                 <p><a href="final/nav.php">nav.php</a></p>
