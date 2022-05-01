@@ -1,11 +1,6 @@
 main {
-    display: grid;
     grid-template-areas: "page-heading" "section-three" "section-one" "section-two";
     grid-template-columns: auto auto;
-    grid-gap: 1%;
-}
-.history, .the-nba {
-    grid-area: section-three;
 }
 
 .form main {
@@ -18,9 +13,4 @@ main {
 
 .form-it-self {
     grid-column: 1;
-    grid-row: 3;
-}
-
-.form {
-    grid-row: 4;
 }
