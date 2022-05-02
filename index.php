@@ -103,7 +103,9 @@
             <section class="supporting-files">
                 <h3>Supporting files</h3>
                 <p><a href="final/css/custom.css">custom.css</a> </p>
-                <p><a href="final/images/wireframe-desktop.png">wireframe</a></p>
+                <p><a href="final/css/custom-tablet.css">custom-tablet.css</a> </p>
+                <p><a href="final/css/custom-phone.css">custom-phone.css</a> </p>
+                <p><a href="final/images/wireframe-desktop.png">Wireframe</a></p>
                 <p><a href="final/images/wireframe-tablet.png">Tablet Wireframe</a></p>
                 <p><a href="final/images/wireframe-phone.png">Phone Wireframe</a></p>
                 <p><a href="final/header.php">header.php</a></p>
