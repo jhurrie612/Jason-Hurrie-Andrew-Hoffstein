@@ -3,6 +3,12 @@ include 'top.php';
 ?>
     <main>
         <h1>Top Running Backs</h1>
+            <section class="jt-photo">
+                <figure class="jt">
+                    <img class="rounded" alt="Jonathan Taylor Stiff Arms the Defender" src="images/JTStiffArm.jpg">
+                    <figcaption><cite><a href="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1312/2021/03/01120424/GettyImages-1294353473-818x460.jpg" target="_blank">Jonathan Taylor Stiff Arms the Defender</a></cite></figcaption>
+                </figure>
+            </section>
             <section class="rb">
                 <h2>Jonathan Taylor</h2>
                 <p>In the 2021 NFL season, Jonathan Taylor was leading PPR scorer during this fantasy football season. This season, Jonathan Taylor scored 373.1 PPR points which racking up a league leading 1,811 rushing yards on 332 attempts, averaging 5.5 yards per carry while scoring 18 touchdowns and totaling 40 receptions and adding another 659 receiving yards to his total. Along with this, he was averaging 106.5 yards per game.</p> 
@@ -19,11 +25,10 @@ include 'top.php';
                 <p>This season, LaDainian Tomlinson not only scored the most points ever in Fantasy Football by a running back during a full NFL season, he also won the leagues Most Valuable Player award, the NFL Offensive Player of the Year, was named to the First-team All-Pro, along with being the rushing yards, rushing touchdowns, and scoring leader during the whole 2006 NFL season. LaDainian Tomlinson total 483.1 PPR point season allowed fantasy owners that season to make tons of mistakes during draft night, trades, and more and still help their team make the playoffs. Though some owners that season drafted players such as Larry Johnson and Shaun Alexander ahead of him that season, neither of these players scored touchdowns and and racked up total yards each week like LaDainian Tomlinson did that season.</p>
             </section>
 
-            <section class="photo">
-                <h2>Photograph</h2>
-                <figure class="jt">
-                    <img class="rounded" alt="Jonathan Taylor Stiff Arms the Defender" src="images/JTStiffArm.jpg">
-                    <figcaption><cite><a href="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1312/2021/03/01120424/GettyImages-1294353473-818x460.jpg" target="_blank">Jonathan Taylor Stiff Arms the Defender</a></cite></figcaption>
+            <section class="lt-photo">
+                <figure class="lt">
+                    <img class="rounded" alt="LaDainian Tomlinson Touchdown" src="images/ltphoto.jpg">
+                    <figcaption><cite><a href="https://www.si.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTcxMjA0NzAwODE2NDg0MzM0/image-placeholder-title.jpg" target="_blank">LaDainian Tomlinson Touchdown</a></cite></figcaption>
                 </figure>
             </section>
     </main>

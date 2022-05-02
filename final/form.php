@@ -39,10 +39,9 @@ function verifyAlphaNum($testString) {
     <main>
     <h1>Most Important Fantasy Football Position</h1>
         <section class="form-info">
-            <h4>Thank You!</h4>
             <figure class="rounded">
-                <img class="rounded" alt="thanks" src="images/thanks.jpg">
-                <figcaption><cite><a href=https://t3.ftcdn.net/jpg/02/91/52/22/360_F_291522205_XkrmS421FjSGTMRdTrqFZPxDY19VxpmL.jpg target="_blank">Thank you for your submission.</a></cite></figcaption>
+                <img class="rounded" alt="ffwithteams" src="images/ffwithteams.png">
+                <figcaption><cite><a href=https://dtbeacon.net/wp-content/uploads/2019/10/Fantasy-football-image.png target="_blank">Fantasy Football</a></cite></figcaption>
             </figure>
             <?php
             if($_SERVER["REQUEST_METHOD"] == 'POST'){
@@ -143,7 +142,7 @@ function verifyAlphaNum($testString) {
                         $reason, $draft, $cooperKupp, $jonathanTaylor, $tomBrady, $other);
 
                         if($statement->execute($data)){
-                            print '<h2>Thank you</h2>';
+                            print '<h2>Success!</h2>';
                             print '<p>Record is succesfully saved!</p>';
 
                             $to = $email;
@@ -176,12 +175,6 @@ function verifyAlphaNum($testString) {
         </section>
 
         <section class="form-feedback">
-            <h2>Results from the survey will show here.</h2>
-            <?php
-            print '<p>Post Array:</p><pre>';
-            print_r($_POST);
-            print '</pre>';
-            ?>
             <h2>Thank you</h2>
         </section>
 

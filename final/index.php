@@ -37,20 +37,20 @@ foreach ($records as $record) {
 }
 ?>
                     <tr>
-                        <td colspan="3">Source: <cite><a href="https://www.statmuse.com/fantasy/ask/which-qb-has-the-most-fantasy-points-in-a-game" target="_blank">https://www.statmuse.com/fantasy/ask/which-qb-has-the-most-fantasy-points-in-a-game</a></cite></td>
+                        <td colspan="3">Source: <cite><a href="https://www.statmuse.com/fantasy/ask?q=which+qb+has+the+most+fantasy+points+in+a+game+all-time" target="_blank">QB's with the most points in one game</a></cite></td>
                     </tr>
                 </table>
                 <figure class="fflogo">
                     <img alt="Fantasy Football Logo" src="images/fantasy-football.png">
                     <figcaption><cite><a href="https://a1.espncdn.com/combiner/i?img=%2Fi%2Fespn%2Fmisc_logos%2F500%2Fffl.png" target="_blank">Fantasy Football Logo</a></cite></figcaption>
                 </figure>
-                <h2>Cumulative Carrer Fantasy Points by a Quarterback</h2>
+                <h2>Cumulative Career Fantasy Points by a Quarterback</h2>
                 <ol>
                 <li>Tom Brady - 5,888.7 Points</li>
                 <li>Drew Brees - 4,423.9 Points</li>
                 <li>Peyton Manning - 4,947.1 Points</li>
                 <li>Brett Farve - 4,803.2 Points</li>
-                <li>Source: <cite><a href="https://www.statmuse.com/fantasy/ask/qb-with-most-fantasy-points" target="_blank">https://www.statmuse.com/fantasy/ask/qb-with-most-fantasy-points</a></cite></li>
+                <li>Source: <cite><a href="https://www.statmuse.com/fantasy/ask/which-qb-has-the-most-fantasy-points-in-a-carrer" target="_blank">Most Career Fantasy Points by a QB</a></cite></li>
                 </ol>
             </section>
     </main>

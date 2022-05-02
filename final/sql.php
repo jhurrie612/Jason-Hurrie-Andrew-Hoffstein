@@ -38,7 +38,7 @@ include 'top.php';
             fldFirstName varchar(40),
             fldLastName varchar(40),
             fldEmail varchar(50),
-            fldDraft varchar(11),
+            fldDraft varchar(15),
             fldQuarterback tinyint(1),
             fldRunningBack tinyint(1),
             fldWideReceiver tinyint(1),

@@ -12,10 +12,10 @@
     ?>" href="detail.php">Top RB</a>
 
     <a class="<?php
-    if($pathParts['filename'] == 'array') {
+    if($pathParts['filename'] == 'detail2') {
         print 'activePage';
     }
-    ?>" href="array.php">Top WR</a>
+    ?>" href="detail2.php">Top WR</a>
 
     <a class="<?php
     if($pathParts['filename'] == 'form') {
