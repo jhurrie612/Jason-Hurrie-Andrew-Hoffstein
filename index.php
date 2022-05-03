@@ -102,6 +102,7 @@
 
             <section class="supporting-files">
                 <h3>Supporting files</h3>
+                <p><a href="final/FinalVideo.mov">Final Presentation</a> </p>
                 <p><a href="final/css/custom.css">custom.css</a> </p>
                 <p><a href="final/css/custom-tablet.css">custom-tablet.css</a> </p>
                 <p><a href="final/css/custom-phone.css">custom-phone.css</a> </p>
