@@ -11,6 +11,7 @@ include 'top.php';
 
                 <p>The once third round NFL draft pick in 2017 by the Rams, Cooper Kupp, has surprised many with his 2021 Triple Crown and Super Bowl MVP season after leading the league in receptions, receiving touchdowns, and receiving yards for the first time since Steve Smith Sr. did it in 2005. Though many people choose a variety of different wide receivers with their first few picks in their fantasy football drafts including his teammate Robert Woods, it is clear that he is one of the best wide receivers in the game and should go in the first two rounds in most drafts this upcoming season. </p>
             <section class="photo">
+            <h2>Super Bowl MVP!</h2>
                 <figure class="kupp">
                     <img class="rounded" alt="Cooper Kupp SuperBowl MVP" src="images/cooper-kupp.jpeg">
                     <figcaption><cite><a href="https://thesportswave.net/wp-content/uploads/2022/02/kupp.jpeg" target="_blank">Cooper Kupp SuperBowl MVP</a></cite></figcaption>

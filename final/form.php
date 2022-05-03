@@ -39,6 +39,7 @@ function verifyAlphaNum($testString) {
     <main>
     <h1>Most Important Fantasy Football Position</h1>
         <section class="form-info">
+            <h2>Survey!</h2>
             <figure class="rounded">
                 <img class="rounded" alt="ffwithteams" src="images/ffwithteams.png">
                 <figcaption><cite><a href=https://dtbeacon.net/wp-content/uploads/2019/10/Fantasy-football-image.png target="_blank">Fantasy Football</a></cite></figcaption>

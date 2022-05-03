@@ -4,13 +4,13 @@ include 'top.php';
     <main>
         <h1>Top Running Backs</h1>
             <section class="jt-photo">
+            <h2>Jonathan Taylor</h2>
                 <figure class="jt">
                     <img class="rounded" alt="Jonathan Taylor Stiff Arms the Defender" src="images/JTStiffArm.jpg">
                     <figcaption><cite><a href="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1312/2021/03/01120424/GettyImages-1294353473-818x460.jpg" target="_blank">Jonathan Taylor Stiff Arms the Defender</a></cite></figcaption>
                 </figure>
             </section>
             <section class="rb">
-                <h2>Jonathan Taylor</h2>
                 <p>In the 2021 NFL season, Jonathan Taylor was leading PPR scorer during this fantasy football season. This season, Jonathan Taylor scored 373.1 PPR points which racking up a league leading 1,811 rushing yards on 332 attempts, averaging 5.5 yards per carry while scoring 18 touchdowns and totaling 40 receptions and adding another 659 receiving yards to his total. Along with this, he was averaging 106.5 yards per game.</p> 
                 
                 <p>This season in week 5, Jonathan Taylor and the Colts played against the Ravens. In this game, Jonathan Taylor rushed 15 times for 53 yards and a touchdown. Along with this, he racked in 116 receiving yards and another receiving touchdown scoring 28.9 fantasy points for his owners that week. In the following week, the colts played against the Texans where he ran 14 times for 145 yards averaging 10.4 yards per carry. There, he scored 27.8 points that week for his owner.In back to back weeks, he scored over 25 points. But this was nothing. In week 11, the colts played against the bills. This was his best game of the season. He ran the ball a season high 32 times for a season high 185 yards and a season high 4 touchdowns in one game. Add on another 19 receiving yards and a receiving touchdown and Jonathan Taylor scored 50.4 fantasy points that week for his owners.</p>
@@ -26,6 +26,7 @@ include 'top.php';
             </section>
 
             <section class="lt-photo">
+                <h2>Celebration!</h2>
                 <figure class="lt">
                     <img class="rounded" alt="LaDainian Tomlinson Touchdown" src="images/ltphoto.jpg">
                     <figcaption><cite><a href="https://www.si.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTcxMjA0NzAwODE2NDg0MzM0/image-placeholder-title.jpg" target="_blank">LaDainian Tomlinson Touchdown</a></cite></figcaption>
