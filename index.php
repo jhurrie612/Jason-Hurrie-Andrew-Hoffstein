@@ -94,6 +94,7 @@
             <h2 class="header">Final Project - Project by Andrew and Jason.</h2>
             <section class="public-files">
                 <h3>Public Files</h3>
+                <p><a href="final/FinalVideo.mov">Final Presentation</a> </p>
                 <p><a href="final/index.php">index.php (Contains Table)</a></p>
                 <p><a href="final/detail.php">detail.php</a></p> 
                 <p><a href="final/detail2.php">detail2.php</a></p>
@@ -102,7 +103,6 @@
 
             <section class="supporting-files">
                 <h3>Supporting files</h3>
-                <p><a href="final/FinalVideo.mov">Final Presentation</a> </p>
                 <p><a href="final/css/custom.css">custom.css</a> </p>
                 <p><a href="final/css/custom-tablet.css">custom-tablet.css</a> </p>
                 <p><a href="final/css/custom-phone.css">custom-phone.css</a> </p>
@@ -114,7 +114,6 @@
                 <p><a href="final/nav.php">nav.php</a></p>
                 <p><a href="final/footer.php">footer.php</a></p>
                 <p><a href="final/sql.php">SQL statement</a></p>
-                <p><a href="final/images/records.png">Database records</a></p>
             </section>
         </section>
 
