@@ -3,8 +3,8 @@
     --main-bg-color-rgba: #b88b48;
     --nav-bg-color-rgba: rgba(255, 255, 255, 0.9);
     --main-text-color:#000000;
-    --background-odd: rgba(255, 203, 126, 0.9);
-    --background-even: rgb(207, 137, 72);
+    --background-odd: rgb(172, 111, 55);
+    --background-even: rgba(243, 179, 83, 0.9);
 }
 
 * {
@@ -243,7 +243,7 @@ main h1:first-child {
 
 .jt-photo {
     grid-area: page-heading;
-    padding-bottom: 7%;
+    padding-bottom: 4%;
     padding-top: 15%;
 }
 
@@ -334,7 +334,7 @@ input[type="checkbox"] {
 }
 
 .activePage {
-    background-color: #b88b48;
+    background-color: #f3cb90;
 }
 
 .rounded {
