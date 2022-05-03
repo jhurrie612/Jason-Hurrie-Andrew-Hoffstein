@@ -55,10 +55,16 @@ header h2 {
 
 nav,
 footer {
-    background-color: white;
     border-bottom: medium solid var(--main-bg-color);
     padding: 1% 0;
     text-align: center;
+}
+
+nav{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/AmFBfield.svg/1200px-AmFBfield.svg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main {
@@ -67,6 +73,7 @@ main {
 }
 
 footer {
+    background-color: white;
     clear: both;
 }
 
